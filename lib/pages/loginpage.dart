@@ -10,84 +10,157 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        
-        body: Container(
-          padding: EdgeInsets.all(10),
-          decoration: BoxDecoration(image: DecorationImage(image: AssetImage("images/img1.png"),fit: BoxFit.fill)),
-          child: GlassContainer.clearGlass(
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height-20,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Image.asset(
-                  'images/img0.jpeg',
-                  width: 100,
-                  height: 100,
-                ),
-                SizedBox(height: 20),
-                Text(
-                  'Emotion Tracker',
-                  style: TextStyle(
-                    fontSize: 24,
-                    fontWeight: FontWeight.bold,
-                    color: Color.fromARGB(255, 115, 4, 195),
-                  ),
-                ),
-                SizedBox(height: 30),
-                Padding(
-                  padding: const EdgeInsets.all(15),
-                  child: TextField(
-                    style: TextStyle(color: Color(0xFF76453B)),
-                    decoration: InputDecoration(
-                      labelText: 'Username',
-                      labelStyle: TextStyle(color: Color(0xFF76453B)),
-                    ),
-                  ),
-                ),
-                SizedBox(height: 15),
-                Padding(
-                  padding: const EdgeInsets.all(15),
-                  child: TextField(
-                    style: TextStyle(color: Color(0xFF4C2C2D)),
-                    obscureText: true,
-                    decoration: InputDecoration(
-                      labelText: 'Password',
-                      labelStyle: TextStyle(color: Color(0xFF4C2C2D)),
-                    ),
-                  ),
-                ),
-                SizedBox(height: 20),
-                OutlinedButton(
-                  onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));},
-                  style: OutlinedButton.styleFrom(
-                    side: BorderSide(color: Color.fromARGB(255, 115, 4, 195)),
-                  ),
-                  child: Text(
-                    'Login',
-                    style: TextStyle(color: Color.fromARGB(255, 115, 4, 195)),
-                  ),
-                ),
-                SizedBox(height: 30),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      "Don't have an account?",
-                      style: TextStyle(color: Color(0xFF4C2C2D)),
-                    ),
-                    TextButton(
-                      onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context)=>RegisterPage()));},
-                      child: Text(
-                        'Sign Up',
-                        style: TextStyle(color: Color(0xFFCA4E12)),
+        resizeToAvoidBottomInset: false,
+        body: Stack(
+          
+          
+          children: [
+            Container(
+              width: MediaQuery.of(context).size.width,
+              height: 400,
+              decoration: BoxDecoration(image: DecorationImage(image: AssetImage("images/image3.jpg"),fit: BoxFit.fill)),),
+            Container(
+              decoration: BoxDecoration(color: Color(0xFFEAB2A0),borderRadius: BorderRadius.only(topLeft: Radius.circular(47),topRight: Radius.circular(47))),
+              margin: EdgeInsets.only(top: 300),
+              width: MediaQuery.of(context).size.width,
+              height: 521,
+              
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  
+                  Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 5),
+                      child: Container(
+                        height: 60,
+                        width: 265,
+                        padding: EdgeInsets.only(left: 10),
+                        decoration: BoxDecoration(
+                          color: Color(0xFF435B66),
+                          border: Border.all(color: Color(0xFF1A9EB0)),
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        child: Center(
+                          child: TextFormField(
+                            style: TextStyle(color: Colors.white),
+                            
+                            keyboardType: TextInputType.emailAddress,
+                            decoration: const InputDecoration(
+                              border: InputBorder.none,
+                              hintText: '   Email',
+                              hintStyle: TextStyle(color: Colors.white),
+                              suffixIcon: Icon(Icons.check, color: Colors.grey),
+                            ),
+                          ),
+                        ),
                       ),
                     ),
-                  ],
-                ),
-              ],
+                  SizedBox(height: 15),
+                  Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 5),
+                      child: Container(
+                        height: 60,
+                        width: 265,
+                        padding: EdgeInsets.only(left: 10),
+                        decoration: BoxDecoration(
+                          color: Color(0xFF435B66),
+                          border: Border.all(color: Color(0xFF1A9EB0)),
+                          borderRadius: BorderRadius.circular(20),
+                        ),
+                        child: Center(
+                          child: TextFormField(
+                            style: TextStyle(color: Colors.white),
+                            
+                            keyboardType: TextInputType.visiblePassword,
+                            decoration: const InputDecoration(
+                              border: InputBorder.none,
+                              hintText: '   Password',
+                              hintStyle: TextStyle(color: Colors.white),
+                              suffixIcon: Icon(Icons.check, color: Colors.grey),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    
+                  SizedBox(height: 20),
+                  Container(
+                      height: 60.0,
+                      width: 265,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          color: Color(0xFF081827)),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 15),
+                        child: TextButton(
+                          onPressed: ()  {
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
+                          },
+                          style: TextButton.styleFrom(
+                              backgroundColor: Colors.transparent,
+                              shadowColor: Colors.transparent),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              Text(
+                                'Sign In',
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 18),
+                              ),
+                              Icon(
+                                Icons.arrow_forward,
+                                color: Colors.white,
+                                size: 30,
+                              )
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  SizedBox(
+                      height: 20,
+                    ),
+                    
+                    Container(
+                      color: Color(0xFF2D4356),
+                      child: SizedBox(
+                        height: 2,
+                        width: 300,
+                      ),
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    GestureDetector(
+                      onTap: ()  {
+                        
+                      },
+                      child: Image(
+                        image: AssetImage("images/google.png"),
+                        height: 40,
+                        width: 40,
+                      ),
+                    ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "Don't have an account?",
+                        style: TextStyle(color: Color(0xFF4C2C2D)),
+                      ),
+                      TextButton(
+                        onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context)=>RegisterPage()));},
+                        child: Text(
+                          'Sign Up',
+                          style: TextStyle(color: Color(0xFFCA4E12)),
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
             ),
-          ),
+          ],
         ),
       ),
     );

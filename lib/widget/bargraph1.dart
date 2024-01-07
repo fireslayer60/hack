@@ -20,9 +20,9 @@ class BarChartSample1 extends StatefulWidget {
       ];
 
   final Color barBackgroundColor =
-      AppColors.contentColorWhite.withOpacity(0.3);
-  final Color barColor = AppColors.contentColorWhite;
-  final Color touchedBarColor = Color.fromARGB(255, 115, 4, 195);
+      Colors.white;
+  final Color barColor = Color(0xFF435B66);
+  final Color touchedBarColor = Color(0xFF081827);
 
   @override
   State<StatefulWidget> createState() => BarChartSample1State();
@@ -49,7 +49,7 @@ class BarChartSample1State extends State<BarChartSample1> {
                 const Text(
                   'Your Mood Graph',
                   style: TextStyle(
-                    color: Colors.black87,
+                    color: Colors.black,
                     fontSize: 24,
                     fontWeight: FontWeight.bold,
                   ),
@@ -60,7 +60,7 @@ class BarChartSample1State extends State<BarChartSample1> {
                 Text(
                   'These were your moods the past week',
                   style: TextStyle(
-                    color: Colors.black54,
+                    color: Colors.black,
                     fontSize: 14,
                     fontWeight: FontWeight.bold,
                   ),
@@ -256,7 +256,7 @@ class BarChartSample1State extends State<BarChartSample1> {
 
   Widget getTitles(double value, TitleMeta meta) {
     const style = TextStyle(
-      color: Colors.white,
+      color: Colors.black,
       fontWeight: FontWeight.bold,
       fontSize: 14,
     );
