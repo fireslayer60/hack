@@ -22,21 +22,22 @@ class _JournalPageState extends State<JournalPage> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(child: Scaffold(body: Container(
+      height: MediaQuery.sizeOf(context).height,
+      width: MediaQuery.sizeOf(context).width,
       padding: EdgeInsets.all(10),
-      decoration: BoxDecoration(image: DecorationImage(image: AssetImage("images/img1.png"),fit: BoxFit.fill)),
-      child: GlassContainer.clearGlass(height: MediaQuery.of(context).size.height, width: MediaQuery.of(context).size.width,
+      decoration: BoxDecoration(color: Color(0xFF081827)),
       child: Column(children: [
         Padding(
           padding: const EdgeInsets.only(top:20),
-          child: Text("Rate your day so far out of 5!!",style: TextStyle(fontSize: 20,fontWeight: FontWeight.w500),),
+          child: Text("Rate your day so far out of 5!!",style: TextStyle(color:Colors.white, fontSize: 20,fontWeight: FontWeight.w500),),
           
         ),
         SizedBox(height: 20,),
        Container(
         height: 400,
-        width: 300,
+        width: 350,
         alignment: Alignment.center,
-        decoration: BoxDecoration(borderRadius: BorderRadius.circular(10),color: Colors.white.withOpacity(0.5)),
+        decoration: BoxDecoration(borderRadius: BorderRadius.circular(10),color: Color(0xFFEAB2A0)),
          child:  Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
@@ -86,10 +87,13 @@ class _JournalPageState extends State<JournalPage> {
                 )]
           ),
             
-         ],)
-       )
-
-      ]),),
+         ],
+         )
+       ),
+       SizedBox(height: 20,),
+       
+      
+      ]),
 
     ),));
   }
