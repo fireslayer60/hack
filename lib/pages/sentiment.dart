@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hack/brain/sentiApi.dart';
+import 'package:hack/resources/constant.dart';
 
 class SentimentPage extends StatefulWidget {
   const SentimentPage({super.key});
@@ -11,11 +12,12 @@ class SentimentPage extends StatefulWidget {
 class _SentimentPageState extends State<SentimentPage> {
   final TextEditingController textcontroller =  TextEditingController();
   var data;
+  String avggg = avgg.toStringAsFixed(2);
   String senti = "Press submit";
   @override
   Widget build(BuildContext context) {
     return SafeArea(child: Scaffold(backgroundColor: Color(0xFF081827),
-    
+    resizeToAvoidBottomInset: false,
     body: Center(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -24,7 +26,7 @@ class _SentimentPageState extends State<SentimentPage> {
             margin: EdgeInsets.only(top: 20),
             padding: EdgeInsets.all(8),
             alignment: Alignment.center,
-              height: 400,
+              height: 500,
               width: 350,
               decoration: BoxDecoration(color: Color(0xFFEAB2A0),borderRadius: BorderRadius.circular(10)),
               child: Column(children: [Text("Type out what do you \n    feel about today",style: TextStyle(fontSize: 18,color: Colors.black),),
@@ -85,7 +87,9 @@ class _SentimentPageState extends State<SentimentPage> {
                       ),
                   ),
                   SizedBox(height: 20,),
-                  Text(senti,style: TextStyle(color: Colors.black,fontSize: 20,fontWeight: FontWeight.w500),)
+                  Text(senti,style: TextStyle(color: Colors.black,fontSize: 20,fontWeight: FontWeight.w500),),
+                  SizedBox(height: 20,),
+                  Text("Your average mood value is $avggg",style:TextStyle(color: Colors.black,fontSize: 17,fontWeight: FontWeight.w500))
               
               ]),
              ),

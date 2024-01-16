@@ -6,6 +6,7 @@ import 'dart:math';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 import 'package:hack/resources/colors.dart';
+import 'package:hack/resources/constant.dart';
 
 class BarChartSample1 extends StatefulWidget {
   BarChartSample1({super.key});
@@ -141,19 +142,19 @@ class BarChartSample1State extends State<BarChartSample1> {
   List<BarChartGroupData> showingGroups() => List.generate(7, (i) {
         switch (i) {
           case 0:
-            return makeGroupData(0, 5, isTouched: i == touchedIndex);
+            return makeGroupData(0, modd["Monday"]!, isTouched: i == touchedIndex);
           case 1:
-            return makeGroupData(1, 4.5, isTouched: i == touchedIndex);
+            return makeGroupData(1, modd["Tuesday"]!, isTouched: i == touchedIndex);
           case 2:
-            return makeGroupData(2, 3, isTouched: i == touchedIndex);
+            return makeGroupData(2, modd["Wednesday"]!, isTouched: i == touchedIndex);
           case 3:
-            return makeGroupData(3, 3.5, isTouched: i == touchedIndex);
+            return makeGroupData(3, modd["Thursday"]!, isTouched: i == touchedIndex);
           case 4:
-            return makeGroupData(4, 2, isTouched: i == touchedIndex);
+            return makeGroupData(4, modd["Friday"]!, isTouched: i == touchedIndex);
           case 5:
-            return makeGroupData(5, 4.5, isTouched: i == touchedIndex);
+            return makeGroupData(5, modd["Saturday"]!, isTouched: i == touchedIndex);
           case 6:
-            return makeGroupData(6, 5, isTouched: i == touchedIndex);
+            return makeGroupData(6, modd["Sunday"]!, isTouched: i == touchedIndex);
           default:
             return throw Error();
         }

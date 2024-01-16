@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:glass_kit/glass_kit.dart';
+import 'package:hack/pages/btmnbr.dart';
 import 'package:hack/pages/mainpage.dart';
 import 'package:hack/pages/registrationpage.dart';
 
@@ -10,7 +11,7 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        resizeToAvoidBottomInset: false,
+        
         body: Stack(
           
           
@@ -94,7 +95,7 @@ class LoginPage extends StatelessWidget {
                         padding: const EdgeInsets.symmetric(horizontal: 15),
                         child: TextButton(
                           onPressed: ()  {
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>navbar()));
                           },
                           style: TextButton.styleFrom(
                               backgroundColor: Colors.transparent,

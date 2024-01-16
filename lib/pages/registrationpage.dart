@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:glass_kit/glass_kit.dart';
+import 'package:hack/pages/btmnbr.dart';
 import 'package:hack/pages/loginpage.dart';
 import 'package:hack/pages/mainpage.dart';
 
@@ -96,7 +97,7 @@ class RegisterPage extends StatelessWidget {
                         padding: const EdgeInsets.symmetric(horizontal: 15),
                         child: TextButton(
                           onPressed: ()  {
-                            Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=>navbar()));
                           },
                           style: TextButton.styleFrom(
                               backgroundColor: Colors.transparent,

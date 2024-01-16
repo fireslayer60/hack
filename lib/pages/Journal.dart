@@ -3,7 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_animated_button/flutter_animated_button.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:glass_kit/glass_kit.dart';
+import 'package:hack/resources/constant.dart';
 import 'package:hack/widget/animatedbut.dart';
+import 'package:intl/intl.dart';
 
 class JournalPage extends StatefulWidget {
   const JournalPage({super.key});
@@ -13,11 +15,15 @@ class JournalPage extends StatefulWidget {
 }
 
 class _JournalPageState extends State<JournalPage> {
-  int selectedButtonIndex = -1;
+  int selectedButtonIndex = modd[DateFormat('EEEE').format(DateTime.now())]!.toInt()-1;
   void onButtonPressed(int index) {
     setState(() {
       selectedButtonIndex = index;
+      modd[DateFormat('EEEE').format(DateTime.now())] = selectedButtonIndex.toDouble()+1;
+      avgg = (modd["Monday"]!+modd["Tuesday"]!+modd["Wednesday"]!+modd["Thursday"]!+modd["Friday"]!+modd["Saturday"]!+modd["Sunday"]!)/7;
+
     });
+    
   }
   @override
   Widget build(BuildContext context) {

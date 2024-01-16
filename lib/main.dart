@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hack/pages/Journal.dart';
+import 'package:hack/pages/btmnbr.dart';
 import 'package:hack/pages/loginpage.dart';
 import 'package:hack/pages/mainpage.dart';
 import 'package:hack/pages/sentiment.dart';
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SentimentPage(),
+      home: LoginPage(),
     );
   }
 }
