@@ -1,16 +1,9 @@
-# hack
+# Mooder
 
-A new Flutter project.
+An interactive application made in flutter that helps people to track their emotional activity. Mooder offers various features like sentiment analysis of your current day, mood tracking and even a mood journal. The aim with this app is to help the user maintain awareness about his/her current mental health.
 
-## Getting Started
+## Installing instructions
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Make sure to use the latest flutter sdk and run the pubsec.yaml file.
+Then run the main.dart file.
+Everything else is included in the repo.
